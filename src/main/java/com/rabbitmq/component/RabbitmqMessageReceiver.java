@@ -20,7 +20,7 @@ public class RabbitmqMessageReceiver {
 	public void receiveMessage(byte[] data) {
 
 		BookDetailDTO bookDetailDTO = (BookDetailDTO) SerializationUtils.deserialize(data);
-		System.out.println("AuthorName" + bookDetailDTO.getAuthorName());
+		System.out.println("Author Name" + bookDetailDTO.getAuthorName());
 
 		latch.countDown();
 	}
